@@ -16,7 +16,7 @@ export default function Home() {
           <a>Contact</a>
         </div>
       </div>
-      <div className="w-auto h-90 bg-zinc-900/80 mx-40 mt-30 fade-in"></div>
+      <div className="h-90 bg-zinc-900/80 mx-40 mt-30 fade-in"></div>
     </div>
   );
 }
