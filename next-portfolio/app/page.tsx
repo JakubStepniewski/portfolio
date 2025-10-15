@@ -272,7 +272,15 @@ export default function Home() {
           <a className="text-2xl text-white">
             Feel free to reach out for collaborations or just a friendly chat!
           </a>
-          <a className="text-2xl text-white">Email:</a>
+          <div className="flex">
+            <div>siema</div>
+            <div className="flex-col">
+              <div>
+                <a className="text-2xl text-white">Email:</a>
+              </div>
+              <div>kubastp12@gmai.com</div>
+            </div>
+          </div>
         </div>
       </AnimatedSection>
     </div>
