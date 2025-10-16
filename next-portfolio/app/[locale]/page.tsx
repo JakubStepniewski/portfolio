@@ -1,15 +1,18 @@
 import AnimatedSection from "./components/AnimatedSection";
 import ExperienceItem from "./components/ExperienceItem";
+import LocaleSwitcher from "./components/LocaleSwitcher";
 import SkillBar from "./components/SkillBar";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
   return (
     <div className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 md:px-100 px-20 h-auto">
       {/* NAVBAR */}
 
       <div className="flex justify-between p-5 text-white bg-zinc-950/30 backdrop-blur-md sticky top-0 z-2 rounded-2xl">
         <div>
-          <a className="font-bold text-2xl">Jakub Stępniewski</a>
+          <a className="font-bold text-2xl">{t("title")}</a>
         </div>
         <div className="flex gap-10 items-center">
           <a>About</a>
@@ -18,6 +21,7 @@ export default function Home() {
           <a>Tech stack</a>
           <a>Projects</a>
           <a>Contact</a>
+          <LocaleSwitcher />
         </div>
       </div>
 
