@@ -16,13 +16,11 @@ export default function LocaleSwitcher() {
   };
 
   return (
-    <select
-      value={locale}
-      onChange={(e) => switchLocale(e.target.value)}
-      className="text-white bg-zinc-950 p-2 rounded-lg"
+    <button
+      onClick={() => switchLocale(locale === "en" ? "pl" : "en")}
+      className="mr-4 text-white bg-zinc-950 p-2 rounded-lg"
     >
-      <option value="en">EN</option>
-      <option value="pl">PL</option>
-    </select>
+      {locale === "en" ? "PL" : "EN"}
+    </button>
   );
 }
