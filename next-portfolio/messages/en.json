@@ -1,6 +1,18 @@
 {
   "HomePage": {
     "title": "Jakub Stepniewski",
-    "about": "About"
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "education": "Education",
+    "languages": "Languages",
+    "projects": "Projects",
+    "contact": "Contact",
+    "greeting": "Hi, I'm Jakub Stępniewski",
+    "param1": "A passionate fullstack developer with a knack for creating stunning and user-friendly web applications.",
+    "param2": "With expertise in React, Next.js, and modern web technologies, I bring ideas to life through clean and efficient code.",
+    "param3": " I'm a dedicated fullstack developer with a passion for crafting visually appealing and user-friendly web applications. My journey in web development began with a fascination for design and a desire to create seamless digital experiences.",
+    "param4": "Over the years, I've honed my skills in HTML, CSS, and JavaScript, and have become proficient in modern frameworks like React and Next.js. I thrive on challenges and enjoy collaborating with cross-functional teams to bring innovative ideas to life.",
+    "param5": "When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or indulging in my love for photography and travel."
   }
 }

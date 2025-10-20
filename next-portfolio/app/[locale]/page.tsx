@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 export default function Home() {
   const t = useTranslations("HomePage");
   return (
-    <div className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 md:px-100 px-20 h-auto">
+    <div className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 2xl:px-100 md:px-40 h-auto">
       {/* NAVBAR */}
 
       <div className="flex justify-between p-5 text-white bg-zinc-950/30 backdrop-blur-md sticky top-0 z-2 rounded-2xl">
@@ -15,12 +15,12 @@ export default function Home() {
           <a className="font-bold text-2xl">{t("title")}</a>
         </div>
         <div className="flex gap-10 items-center">
-          <a>About</a>
-          <a>Skills</a>
-          <a>Experience</a>
-          <a>Tech stack</a>
-          <a>Projects</a>
-          <a>Contact</a>
+          <a>{t("about")}</a>
+          <a>{t("skills")}</a>
+          <a>{t("experience")}</a>
+          <a>{t("education")}</a>
+          <a>{t("languages")}</a>
+          <a>{t("contact")}</a>
           <LocaleSwitcher />
         </div>
       </div>
@@ -31,19 +31,13 @@ export default function Home() {
           {/* DESCRIPTION */}
           <div className="w-150">
             <div>
-              <a className="text-5xl font-bold">Hi, I'm Jakub Stępniewski</a>
+              <a className="text-5xl font-bold">{t("greeting")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">
-                A passionate frontend developer with a knack for creating
-                stunning and user-friendly web applications.
-              </a>
+              <a className="text-2xl">{t("param1")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">
-                With expertise in React, Next.js, and modern web technologies, I
-                bring ideas to life through clean and efficient code.
-              </a>
+              <a className="text-2xl">{t("param2")}</a>
             </div>
             {/* SOCIALS */}
             <div className="flex gap-5 mt-5">
@@ -98,31 +92,16 @@ export default function Home() {
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
           <div className="w-150">
             <div>
-              <a className="text-4xl font-bold">About Me</a>
+              <a className="text-4xl font-bold">{t("about")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">
-                I'm a dedicated frontend developer with a passion for crafting
-                visually appealing and user-friendly web applications. My
-                journey in web development began with a fascination for design
-                and a desire to create seamless digital experiences.
-              </a>
+              <a className="text-2xl">{t("param3")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">
-                Over the years, I've honed my skills in HTML, CSS, and
-                JavaScript, and have become proficient in modern frameworks like
-                React and Next.js. I thrive on challenges and enjoy
-                collaborating with cross-functional teams to bring innovative
-                ideas to life.
-              </a>
+              <a className="text-2xl">{t("param4")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">
-                When I'm not coding, you can find me exploring the latest tech
-                trends, contributing to open-source projects, or indulging in my
-                love for photography and travel.
-              </a>
+              <a className="text-2xl">{t("param5")}</a>
             </div>
           </div>
         </div>
@@ -132,33 +111,26 @@ export default function Home() {
       {/* SKILLS */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
-          <div className="text-4xl">Skills</div>
+          <div className="text-4xl">{t("skills")}</div>
         </div>
-        <div className="flex flex-col m-10 mt-0 gap-7">
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
-            <SkillBar label="HTML" value={95} />
-          </div>
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
-            <SkillBar label="HTML" value={95} />
-          </div>
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
-            <SkillBar label="HTML" value={95} />
-          </div>
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
-            <SkillBar label="HTML" value={95} />
-          </div>
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
-            <SkillBar label="HTML" value={95} />
-          </div>
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
-            <SkillBar label="HTML" value={95} />
-          </div>
+        <div className="m-10 mt-0 gap-7 grid grid-cols-2 grid-gap-7">
+          <SkillBar label="HTML" value={95} />
+          <SkillBar label="CSS" value={95} />
+
+          <SkillBar label="JavaScript" value={95} />
+          <SkillBar label="TypeScript" value={95} />
+
+          <SkillBar label="React" value={95} />
+          <SkillBar label="Next.js" value={95} />
+
+          <SkillBar label="MongoDB" value={95} />
+          <SkillBar label="PostgreSQL" value={95} />
+
+          <SkillBar label="Tailwind" value={95} />
+          <SkillBar label="Java" value={95} />
+
+          <SkillBar label="Python" value={95} />
+          <SkillBar label="HTML" value={95} />
         </div>
       </AnimatedSection>
       {/* SPACER */}
