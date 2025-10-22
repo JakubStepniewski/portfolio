@@ -114,23 +114,23 @@ export default function Home() {
           <div className="text-4xl">{t("skills")}</div>
         </div>
         <div className="m-10 mt-0 gap-7 grid grid-cols-2 grid-gap-7">
-          <SkillBar label="HTML" value={95} />
-          <SkillBar label="CSS" value={95} />
+          <SkillBar label="HTML" value={90} />
+          <SkillBar label="CSS" value={70} />
 
-          <SkillBar label="JavaScript" value={95} />
-          <SkillBar label="TypeScript" value={95} />
+          <SkillBar label="JavaScript" value={80} />
+          <SkillBar label="TypeScript" value={90} />
 
           <SkillBar label="React" value={95} />
-          <SkillBar label="Next.js" value={95} />
+          <SkillBar label="Next.js" value={85} />
 
-          <SkillBar label="MongoDB" value={95} />
-          <SkillBar label="PostgreSQL" value={95} />
+          <SkillBar label="MongoDB" value={80} />
+          <SkillBar label="PostgreSQL" value={75} />
 
-          <SkillBar label="Tailwind" value={95} />
-          <SkillBar label="Java" value={95} />
+          <SkillBar label="Tailwind" value={90} />
+          <SkillBar label="Java" value={75} />
 
-          <SkillBar label="Python" value={95} />
-          <SkillBar label="HTML" value={95} />
+          <SkillBar label="Python" value={60} />
+          <SkillBar label="C#" value={80} />
         </div>
       </AnimatedSection>
       {/* SPACER */}
@@ -139,7 +139,7 @@ export default function Home() {
       <AnimatedSection>
         <div>
           <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white">
-            <div className="text-4xl">Experience</div>
+            <div className="text-4xl">{t("experience")}</div>
             <div className="mt-10 flex flex-col gap-10">
               <ExperienceItem
                 title="Leader Student"

@@ -18,7 +18,7 @@ export default function LocaleSwitcher() {
   return (
     <button
       onClick={() => switchLocale(locale === "en" ? "pl" : "en")}
-      className="mr-4 text-white bg-zinc-950 p-2 rounded-lg"
+      className="mr-4 text-white p-2 rounded-lg"
     >
       {locale === "en" ? "PL" : "EN"}
     </button>
