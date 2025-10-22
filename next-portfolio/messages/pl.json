@@ -2,7 +2,6 @@
   "HomePage": {
     "title": "Jakub Stępniewski",
     "about": "O mnie",
-<<<<<<< HEAD
     "skills": "Umiejętności",
     "experience": "Doświadczenie",
     "education": "Edukacja",
@@ -15,8 +14,5 @@
     "param3": "Jestem fullstack developerem z pasją do tworzenia wizualnie atrakcyjnych i przyjaznych dla użytkownika aplikacji internetowych. Moja przygoda z tworzeniem stron internetowych zaczęła się od fascynacji designem i chęci tworzenia bezproblemowych doświadczeń cyfrowych.",
     "param4": "Na przestrzeni lat doskonaliłem swoje umiejętności w HTML, CSS i JavaScript, stając się biegłym w nowoczesnych frameworkach, takich jak React i Next.js. Lubię wyzwania i czerpię radość ze współpracy z zespołami międzyfunkcyjnymi, aby ożywiać innowacyjne pomysły.",
     "param5": "Kiedy nie koduję, można mnie znaleźć, eksplorując najnowsze trendy technologiczne, przyczyniając się do projektów open-source lub oddając się mojej pasji do fotografii i podróży."
-=======
-    "projects": "Projekty"
->>>>>>> 979d36feedd8131751358b6d1d2e880f0fa0eaae
   }
 }
