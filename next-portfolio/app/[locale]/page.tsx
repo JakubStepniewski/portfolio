@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 
 export default function Home() {
   const t = useTranslations("HomePage");
+  const e = useTranslations("Education");
+  const exp = useTranslations("Experience");
   return (
     <div className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 2xl:px-100 md:px-40 h-auto">
       {/* NAVBAR */}
@@ -17,8 +19,8 @@ export default function Home() {
         <div className="flex gap-10 items-center">
           <a>{t("about")}</a>
           <a>{t("skills")}</a>
-          <a>{t("experience")}</a>
           <a>{t("education")}</a>
+          <a>{t("experience")}</a>
           <a>{t("languages")}</a>
           <a>{t("contact")}</a>
           <LocaleSwitcher />
@@ -135,38 +137,39 @@ export default function Home() {
       </AnimatedSection>
       {/* SPACER */}
       <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
-      {/* EXPERIENCE */}
+
+      {/* EDUCATION */}
       <AnimatedSection>
         <div>
           <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white">
-            <div className="text-4xl">{t("experience")}</div>
+            <div className="text-4xl">{t("education")}</div>
             <div className="mt-10 flex flex-col gap-10">
               <ExperienceItem
-                title="Leader Student"
-                organization="GIAIC (Governor Initiative AI & Computing)"
-                organizationLink="https://www.giaic.ai"
-                startDate="September 2024"
-                endDate="Present"
-                location="Karachi, Pakistan"
-                description="Promoted to Leader Student based on exceptional performance and contributions. Mentoring fellow students, helping with complex coding problems, and mastering Python and AI development in Quarter 3."
+                title={e("title1")}
+                organization="Technikum nr 4 im. Ryszarda Kaczorowskiego Kielce"
+                organizationLink="https://zse-kielce.edu.pl/"
+                startDate="2016"
+                endDate="2020"
+                location={e("locationCity") + ", " + e("locationCountry")}
+                description={e("description1")}
               />
               <ExperienceItem
-                title="Leader Student"
-                organization="GIAIC (Governor Initiative AI & Computing)"
-                organizationLink="https://www.giaic.ai"
-                startDate="September 2024"
-                endDate="Present"
-                location="Karachi, Pakistan"
-                description="Promoted to Leader Student based on exceptional performance and contributions. Mentoring fellow students, helping with complex coding problems, and mastering Python and AI development in Quarter 3."
+                title={e("title2")}
+                organization={e("organization")}
+                organizationLink="https://tu.kielce.pl/"
+                startDate="2020"
+                endDate="2023"
+                location={e("locationCity") + ", " + e("locationCountry")}
+                description={e("description2")}
               />
               <ExperienceItem
-                title="Leader Student"
-                organization="GIAIC (Governor Initiative AI & Computing)"
-                organizationLink="https://www.giaic.ai"
-                startDate="September 2024"
-                endDate="Present"
-                location="Karachi, Pakistan"
-                description="Promoted to Leader Student based on exceptional performance and contributions. Mentoring fellow students, helping with complex coding problems, and mastering Python and AI development in Quarter 3."
+                title={e("title3")}
+                organization={e("organization")}
+                organizationLink="https://tu.kielce.pl/"
+                startDate="2023"
+                endDate="2025"
+                location={e("locationCity") + ", " + e("locationCountry")}
+                description={e("description3")}
               />
             </div>
           </div>
@@ -174,29 +177,29 @@ export default function Home() {
       </AnimatedSection>
       {/* SPACER */}
       <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
-      {/* EDUCATION */}
+      {/* EXPERIENCE */}
       <AnimatedSection>
         <div>
           <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white">
-            <div className="text-4xl">Education</div>
+            <div className="text-4xl">{t("experience")}</div>
             <div className="mt-10 flex flex-col gap-10">
               <ExperienceItem
-                title="Leader Student"
-                organization="GIAIC (Governor Initiative AI & Computing)"
-                organizationLink="https://www.giaic.ai"
-                startDate="September 2024"
-                endDate="Present"
-                location="Karachi, Pakistan"
-                description="Promoted to Leader Student based on exceptional performance and contributions. Mentoring fellow students, helping with complex coding problems, and mastering Python and AI development in Quarter 3."
+                title={exp("title1")}
+                organization={exp("organization1")}
+                organizationLink="https://infover.pl/"
+                startDate="2023"
+                endDate="2023"
+                location={e("locationCity") + ", " + e("locationCountry")}
+                description={exp("description1")}
               />
               <ExperienceItem
-                title="Leader Student"
-                organization="GIAIC (Governor Initiative AI & Computing)"
+                title={exp("title1")}
+                organization={exp("organization2")}
                 organizationLink="https://www.giaic.ai"
-                startDate="September 2024"
-                endDate="Present"
-                location="Karachi, Pakistan"
-                description="Promoted to Leader Student based on exceptional performance and contributions. Mentoring fellow students, helping with complex coding problems, and mastering Python and AI development in Quarter 3."
+                startDate="2023"
+                endDate="2023"
+                location={e("locationCity") + ", " + e("locationCountry")}
+                description={exp("description2")}
               />
               <ExperienceItem
                 title="Leader Student"
