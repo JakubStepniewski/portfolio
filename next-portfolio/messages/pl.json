@@ -13,7 +13,8 @@
     "param2": "Dzięki doświadczeniu w React, Next.js i nowoczesnych technologiach webowych, ożywiam pomysły poprzez czysty i wydajny kod.",
     "param3": "Jestem fullstack developerem z pasją do tworzenia wizualnie atrakcyjnych i przyjaznych dla użytkownika aplikacji internetowych. Moja przygoda z tworzeniem stron internetowych zaczęła się od fascynacji designem i chęci tworzenia bezproblemowych doświadczeń cyfrowych.",
     "param4": "Na przestrzeni lat doskonaliłem swoje umiejętności w HTML, CSS i JavaScript, stając się biegłym w nowoczesnych frameworkach, takich jak React i Next.js. Lubię wyzwania i czerpię radość ze współpracy z zespołami międzyfunkcyjnymi, aby ożywiać innowacyjne pomysły.",
-    "param5": "Kiedy nie koduję, można mnie znaleźć, eksplorując najnowsze trendy technologiczne, przyczyniając się do projektów open-source lub oddając się mojej pasji do fotografii i podróży."
+    "param5": "Kiedy nie koduję, można mnie znaleźć, eksplorując najnowsze trendy technologiczne, przyczyniając się do projektów open-source lub oddając się mojej pasji do fotografii i podróży.",
+    "projectsSection": "Sekcja projektów jest w budowie. Proszę sprawdź ponownie później"
   },
   "Education": {
     "title1": "Technik informatyk",
@@ -32,5 +33,19 @@
     "description1":"Zdobycie praktycznego doświadczenia w tworzeniu oprogramowania, współpracując z zespołem nad rzeczywistymi projektami, doskonaląc moje umiejętności kodowania i zrozumienie cyklu życia tworzenia oprogramowania.",
     "organization2":"Comayo",
     "description2":"Praca jako Junior Frontend Developer, przyczyniając się do tworzenia i utrzymania aplikacji internetowych za pomocą React i Next.js, współpracując z projektantami i programistami backendu w celu dostarczania wysokiej jakości doświadczeń użytkownika."
+  },
+  "languageNames": {
+    "polish": "Polski",
+    "english": "Angielski",
+    "german": "Niemiecki"
+  },
+  "contact": {
+    "contactMe": "Skontaktuj się ze mną",
+    "name": "Imię",
+    "email": "Email",
+    "message": "Wiadomość",
+    "send": "Wyślij",
+    "successMessage": "Twoja wiadomość została pomyślnie wysłana!",
+    "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbuj ponownie później."
   }
 }

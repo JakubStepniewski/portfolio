@@ -8,6 +8,7 @@ export default function Home() {
   const t = useTranslations("HomePage");
   const e = useTranslations("Education");
   const exp = useTranslations("Experience");
+  const l = useTranslations("languageNames");
   return (
     <div className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 2xl:px-100 md:px-40 h-auto">
       {/* NAVBAR */}
@@ -201,15 +202,6 @@ export default function Home() {
                 location={e("locationCity") + ", " + e("locationCountry")}
                 description={exp("description2")}
               />
-              <ExperienceItem
-                title="Leader Student"
-                organization="GIAIC (Governor Initiative AI & Computing)"
-                organizationLink="https://www.giaic.ai"
-                startDate="September 2024"
-                endDate="Present"
-                location="Karachi, Pakistan"
-                description="Promoted to Leader Student based on exceptional performance and contributions. Mentoring fellow students, helping with complex coding problems, and mastering Python and AI development in Quarter 3."
-              />
             </div>
           </div>
         </div>
@@ -219,15 +211,13 @@ export default function Home() {
       {/* LANGUEAGES */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
-          <div className="text-4xl">Languages</div>
+          <div className="text-4xl">{t("languages")}</div>
         </div>
         <div className="flex flex-col m-10 mt-0 gap-7">
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
-            <SkillBar label="HTML" value={95} />
-          </div>
-          <div className="flex justify-between">
-            <SkillBar label="HTML" value={95} />
+          <div className="grid grid-cols-2 gap-7">
+            <SkillBar label={l("polish")} value={100} />
+            <SkillBar label={l("english")} value={90} />
+            <SkillBar label={l("german")} value={70} />
           </div>
         </div>
       </AnimatedSection>
@@ -236,7 +226,10 @@ export default function Home() {
       {/* PROJECTS */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
-          <div className="text-4xl">Projects</div>
+          <div className="text-4xl">{t("projects")}</div>
+        </div>
+        <div className="flex flex-col m-10 mt-0 gap-7 mb-20">
+          <a className="text-2xl text-white">{t("projectsSection")}</a>
         </div>
       </AnimatedSection>
 
@@ -245,7 +238,7 @@ export default function Home() {
       {/* CONTACT */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
-          <div className="text-4xl">Contact</div>
+          <div className="text-4xl">{t("contact")}</div>
         </div>
         <div className="flex flex-col m-10 mt-0 gap-7 mb-20">
           <a className="text-2xl text-white">

@@ -13,7 +13,8 @@
     "param2": "With expertise in React, Next.js, and modern web technologies, I bring ideas to life through clean and efficient code.",
     "param3": " I'm a dedicated fullstack developer with a passion for crafting visually appealing and user-friendly web applications. My journey in web development began with a fascination for design and a desire to create seamless digital experiences.",
     "param4": "Over the years, I've honed my skills in HTML, CSS, and JavaScript, and have become proficient in modern frameworks like React and Next.js. I thrive on challenges and enjoy collaborating with cross-functional teams to bring innovative ideas to life.",
-    "param5": "When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or indulging in my love for photography and travel."
+    "param5": "When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or indulging in my love for photography and travel.",
+    "projectsSection": "Project section is under construction. Please check back later"
   },
   "Education": {
     "title1": "Technical Student",
@@ -32,5 +33,19 @@
     "description1":"Gained practical experience in software development, collaborating with a team to work on real-world projects, enhancing my coding skills, and understanding of the software development lifecycle.",
     "organization2":"Comayo",
     "description2":"Worked as a Junior Frontend Developer, contributing to the development and maintenance of web applications using React and Next.js, while collaborating with designers and backend developers to deliver high-quality user experiences."
+  },
+  "languageNames": {
+    "polish": "Polish",
+    "english": "English",
+    "german": "German"
+  },
+  "contact": {
+    "contactMe": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "successMessage": "Your message has been sent successfully!",
+    "errorMessage": "There was an error sending your message. Please try again later."
   }
 }
