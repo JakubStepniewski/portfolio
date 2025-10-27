@@ -245,7 +245,7 @@ export default function Home() {
             Feel free to reach out for collaborations or just a friendly chat!
           </a>
           <div className="flex">
-            <div>siema</div>
+            <div>hello</div>
             <div className="flex-col">
               <div>
                 <a className="text-2xl text-white">Email:</a>
