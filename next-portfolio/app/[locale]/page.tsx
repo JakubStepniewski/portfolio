@@ -250,7 +250,7 @@ export default function Home() {
               <div>
                 <a className="text-2xl text-white">Email:</a>
               </div>
-              <div>kubastp12@gmai.com</div>
+              <div>kubastp12@gmail.com</div>
             </div>
           </div>
         </div>
