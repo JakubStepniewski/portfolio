@@ -2,7 +2,9 @@ import AnimatedSection from "./components/AnimatedSection";
 import ExperienceItem from "./components/ExperienceItem";
 import LocaleSwitcher from "./components/LocaleSwitcher";
 import SkillBar from "./components/SkillBar";
+import ContactForm from "./components/ContactForm";
 import { useTranslations } from "next-intl";
+import Spacer from "./components/Spacer";
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -88,7 +90,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
       {/* SPACER */}
-      <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
+      <Spacer />
       {/* ABOUT ME */}
 
       <AnimatedSection>
@@ -110,7 +112,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
       {/* SPACER */}
-      <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
+      <Spacer />
       {/* SKILLS */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
@@ -137,7 +139,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
       {/* SPACER */}
-      <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
+      <Spacer />
 
       {/* EDUCATION */}
       <AnimatedSection>
@@ -177,7 +179,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
       {/* SPACER */}
-      <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
+      <Spacer />
       {/* EXPERIENCE */}
       <AnimatedSection>
         <div>
@@ -207,7 +209,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
       {/* SPACER */}
-      <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
+      <Spacer />
       {/* LANGUEAGES */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
@@ -222,7 +224,7 @@ export default function Home() {
         </div>
       </AnimatedSection>
       {/* SPACER */}
-      <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
+      <Spacer />
       {/* PROJECTS */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
@@ -234,24 +236,52 @@ export default function Home() {
       </AnimatedSection>
 
       {/* SPACER */}
-      <div className="h-1 rounded-full my-30 m-10 bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-900"></div>
+      <Spacer />
       {/* CONTACT */}
       <AnimatedSection>
         <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
           <div className="text-4xl">{t("contact")}</div>
         </div>
-        <div className="flex flex-col m-10 mt-0 gap-7 mb-20">
-          <a className="text-2xl text-white">
-            Feel free to reach out for collaborations or just a friendly chat!
-          </a>
-          <div className="flex">
-            <div>hello</div>
-            <div className="flex-col">
-              <div>
-                <a className="text-2xl text-white">Email:</a>
-              </div>
-              <div>kubastp12@gmail.com</div>
+        <div className="flex flex-row m-10 mt-0 gap-7 mb-20">
+          <div className="flex-col w-1/2">
+            <div className="text-2xl">Get In Touch</div>
+            <div className="mt-5">
+              Feel free to reach out if you have any questions or if you'd like
+              to work together on a project. I typically respond within 30
+              hours.
             </div>
+            <div className="mt-5">Email: kubastp12@gmail.com </div>
+            <div className="mt-5">Phone: +48 123 456 789</div>
+            <div className="mt-5">Location: Poland Kielce</div>
+            <div>
+              <div>Social Media</div>
+              <div className="flex-row flex gap-5 mt-5">
+                <div>
+                  <img
+                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                    src="/linkedin.png"
+                    alt="LinkedIn"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                    src="/linkedin.png"
+                    alt="LinkedIn"
+                  />
+                </div>
+                <div>
+                  <img
+                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                    src="/linkedin.png"
+                    alt="LinkedIn"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex-col w-1/2">
+            <ContactForm />
           </div>
         </div>
       </AnimatedSection>
