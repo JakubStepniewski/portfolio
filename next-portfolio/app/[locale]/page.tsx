@@ -15,7 +15,7 @@ export default function Home() {
     <div className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 2xl:px-100 md:px-40 h-auto">
       {/* NAVBAR */}
 
-      <div className="flex justify-between p-5 text-white bg-zinc-950/30 backdrop-blur-md sticky top-0 z-2 rounded-2xl">
+      <div className="mt-4 flex justify-between p-5 text-white bg-zinc-950/30 backdrop-blur-md sticky top-0 z-2 rounded-2xl">
         <div>
           <a className="font-bold text-2xl">{t("title")}</a>
         </div>
@@ -39,15 +39,15 @@ export default function Home() {
               <a className="text-5xl font-bold">{t("greeting")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">{t("param1")}</a>
+              <a className="text-2xl text-zinc-300">{t("param1")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">{t("param2")}</a>
+              <a className="text-2xl text-zinc-300">{t("param2")}</a>
             </div>
             {/* SOCIALS */}
             <div className="flex gap-5 mt-5">
               <a
-                href=" https://www.linkedin.com/in/jakub-st%C4%99pniewski-5b3b98210/"
+                href="https://www.linkedin.com/in/jakub-st%C4%99pniewski-3aa043202/"
                 target="_blank"
               >
                 <img
@@ -100,13 +100,13 @@ export default function Home() {
               <a className="text-4xl font-bold">{t("about")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">{t("param3")}</a>
+              <a className="text-2xl text-zinc-300">{t("param3")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">{t("param4")}</a>
+              <a className="text-2xl text-zinc-300">{t("param4")}</a>
             </div>
             <div className="mt-5">
-              <a className="text-2xl">{t("param5")}</a>
+              <a className="text-2xl text-zinc-300">{t("param5")}</a>
             </div>
           </div>
         </div>
@@ -257,25 +257,31 @@ export default function Home() {
               <div>Social Media</div>
               <div className="flex-row flex gap-5 mt-5">
                 <div>
-                  <img
-                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
-                    src="/linkedin.png"
-                    alt="LinkedIn"
-                  />
+                  <a href="">
+                    <img
+                      className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                      src="/linkedin.png"
+                      alt="LinkedIn"
+                    />
+                  </a>
                 </div>
                 <div>
-                  <img
-                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
-                    src="/linkedin.png"
-                    alt="LinkedIn"
-                  />
+                  <a href="github.com/stepniewski" target="_blank">
+                    <img
+                      className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                      src="/github.png"
+                      alt="GitHub"
+                    />
+                  </a>
                 </div>
                 <div>
-                  <img
-                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
-                    src="/linkedin.png"
-                    alt="LinkedIn"
-                  />
+                  <a href="twitter.com/stepniewski_" target="_blank">
+                    <img
+                      className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                      src="/twitter.png"
+                      alt="Twitter"
+                    />
+                  </a>
                 </div>
               </div>
             </div>

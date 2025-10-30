@@ -22,11 +22,11 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   return (
     <div className="relative pl-6 border-l border-gray-700">
       {/* Zielona kropka */}
-      <span className="absolute left-[-5px] top-1 w-3 h-3 bg-emerald-500 rounded-full"></span>
+      <span className="absolute left-[-5px] top-1 w-3 h-3 bg-[#1057bb] rounded-full"></span>
 
       <h3 className="text-lg font-semibold text-gray-100">{title}</h3>
 
-      <p className="text-sm text-emerald-400 mb-1">
+      <p className="text-sm text-[#1057bb] mb-1">
         {organizationLink ? (
           <a
             href={organizationLink}
@@ -40,7 +40,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         )}
       </p>
 
-      <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm mb-2">
+      <div className="flex flex-wrap items-center gap-4 text-zinc-300 text-sm mb-2">
         <span className="flex items-center gap-1">
           <span /> {startDate} – {endDate}
         </span>
@@ -49,7 +49,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         </span>
       </div>
 
-      <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
+      <p className="text-zinc-300 text-sm leading-relaxed">{description}</p>
     </div>
   );
 };

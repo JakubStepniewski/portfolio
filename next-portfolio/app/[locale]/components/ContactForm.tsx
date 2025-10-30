@@ -82,7 +82,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center text-white mt-10">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-80">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
         {/* Name */}
         <div className="flex flex-col">
           <input
