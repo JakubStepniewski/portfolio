@@ -12,20 +12,26 @@ export default function Home() {
   const exp = useTranslations("Experience");
   const l = useTranslations("languageNames");
   return (
-    <div className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 2xl:px-100 md:px-40 h-auto">
+    <div
+      id="top"
+      className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 2xl:px-100 md:px-40 h-auto"
+    >
       {/* NAVBAR */}
 
       <div className="mt-4 flex justify-between p-5 text-white bg-zinc-950/30 backdrop-blur-md sticky top-0 z-2 rounded-2xl">
         <div>
-          <a className="font-bold text-2xl">{t("title")}</a>
+          <a href="#top" className="font-bold text-2xl">
+            {t("title")}
+          </a>
         </div>
-        <div className="flex gap-10 items-center">
-          <a>{t("about")}</a>
-          <a>{t("skills")}</a>
-          <a>{t("education")}</a>
-          <a>{t("experience")}</a>
-          <a>{t("languages")}</a>
-          <a>{t("contact")}</a>
+        <div className="flex gap-10 items-center text-sm">
+          <a href="#about">{t("about")}</a>
+          <a href="#skills">{t("skills")}</a>
+          <a href="#education">{t("education")}</a>
+          <a href="#experience">{t("experience")}</a>
+          <a href="#languages">{t("languages")}</a>
+          <a href="#projects">{t("projects")}</a>
+          <a href="#contact">{t("contact")}</a>
           <LocaleSwitcher />
         </div>
       </div>
@@ -63,14 +69,14 @@ export default function Home() {
                   alt="GitHub"
                 />
               </a>
-              <a href="twitter.com/stepniewski_" target="_blank">
+              <a href="https://x.com/Stepniewski_J" target="_blank">
                 <img
                   className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
                   src="/twitter.png"
                   alt="Twitter"
                 />
               </a>
-              <a href="" target="_blank">
+              <a href="https://wa.me/48781355345" target="_blank">
                 <img
                   className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
                   src="/phone.png"
@@ -94,7 +100,10 @@ export default function Home() {
       {/* ABOUT ME */}
 
       <AnimatedSection>
-        <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
+        <div
+          id="about"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+        >
           <div className="w-150">
             <div>
               <a className="text-4xl font-bold">{t("about")}</a>
@@ -115,7 +124,10 @@ export default function Home() {
       <Spacer />
       {/* SKILLS */}
       <AnimatedSection>
-        <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
+        <div
+          id="skills"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+        >
           <div className="text-4xl">{t("skills")}</div>
         </div>
         <div className="m-10 mt-0 gap-7 grid grid-cols-2 grid-gap-7">
@@ -143,7 +155,7 @@ export default function Home() {
 
       {/* EDUCATION */}
       <AnimatedSection>
-        <div>
+        <div id="education" className="scroll-mt-24">
           <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white">
             <div className="text-4xl">{t("education")}</div>
             <div className="mt-10 flex flex-col gap-10">
@@ -182,7 +194,7 @@ export default function Home() {
       <Spacer />
       {/* EXPERIENCE */}
       <AnimatedSection>
-        <div>
+        <div id="experience" className="scroll-mt-24">
           <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white">
             <div className="text-4xl">{t("experience")}</div>
             <div className="mt-10 flex flex-col gap-10">
@@ -212,7 +224,10 @@ export default function Home() {
       <Spacer />
       {/* LANGUEAGES */}
       <AnimatedSection>
-        <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
+        <div
+          id="languages"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+        >
           <div className="text-4xl">{t("languages")}</div>
         </div>
         <div className="flex flex-col m-10 mt-0 gap-7">
@@ -227,7 +242,10 @@ export default function Home() {
       <Spacer />
       {/* PROJECTS */}
       <AnimatedSection>
-        <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
+        <div
+          id="projects"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+        >
           <div className="text-4xl">{t("projects")}</div>
         </div>
         <div className="flex flex-col m-10 mt-0 gap-7 mb-20">
@@ -239,7 +257,10 @@ export default function Home() {
       <Spacer />
       {/* CONTACT */}
       <AnimatedSection>
-        <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
+        <div
+          id="contact"
+          className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+        >
           <div className="text-4xl">{t("contact")}</div>
         </div>
         <div className="flex flex-row m-10 mt-0 gap-7 mb-20">
