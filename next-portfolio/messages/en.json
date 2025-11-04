@@ -41,11 +41,28 @@
   },
   "contact": {
     "contactMe": "Contact Me",
-    "name": "Name",
-    "email": "Email",
-    "message": "Message",
     "send": "Send",
+    "name": "name",
+    "email": "email",
+    "message": "message",
     "successMessage": "Your message has been sent successfully!",
-    "errorMessage": "There was an error sending your message. Please try again later."
+    "errorMessage": "An error occurred while sending the message. Please try again later.",
+    "touch": "Get in Touch",
+    "description": "If you have any questions or would like to collaborate, feel free to reach out to me through the form below or directly via my email."
+  },
+  "formErrors": {
+    "nameRequired": "Name is required.",
+    "emailRequired": "Email is required.",
+    "emailInvalid": "Please enter a valid email address.",
+    "messageRequired": "Message is required.",
+    "messageTooShort": "Message must be at least 10 characters long.",
+    "messageTooLong": "Message cannot exceed 500 characters.",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "yourMessage": "Your Message",
+    "send": "Send",
+    "statusSending": "Sending...",
+    "statusSuccess": "Your message has been sent successfully!",
+    "statusError": "An error occurred while sending the message. Please try again later."
   }
 }

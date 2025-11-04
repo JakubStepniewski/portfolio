@@ -41,11 +41,28 @@
   },
   "contact": {
     "contactMe": "Skontaktuj się ze mną",
-    "name": "Imię",
-    "email": "Email",
-    "message": "Wiadomość",
     "send": "Wyślij",
-    "successMessage": "Twoja wiadomość została pomyślnie wysłana!",
-    "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbuj ponownie później."
+    "name": "nazwa",
+    "email": "e-mail",
+    "message": "wiadomość",
+    "successMessage": "Twoja wiadomość została wysłana pomyślnie!",
+    "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbuj ponownie później.",
+    "touch": "Skontaktuj się ze mną",
+    "description": "Jeśli masz jakieś pytania lub chcesz nawiązać współpracę, nie wahaj się ze mną skontaktować poprzez poniższy formularz lub bezpośrednio na mój e-mail."
+  },
+  "form": {
+    "nameRequired": "Nazwa jest wymagana.",
+    "emailRequired": "E-mail jest wymagany.",
+    "emailInvalid": "Proszę wprowadzić prawidłowy adres e-mail.",
+    "messageRequired": "Wiadomość jest wymagana.",
+    "messageTooShort": "Wiadomość musi mieć co najmniej 10 znaków.",
+    "messageTooLong": "Wiadomość nie może przekraczać 500 znaków.",
+    "yourName": "Twoja nazwa",
+    "yourEmail": "Twój e-mail",
+    "yourMessage": "Twoja wiadomość",
+    "send": "Wyślij",
+    "statusSending": "Wysyłanie...",
+    "statusSuccess": "Twoja wiadomość została pomyślnie wysłana!",
+    "statusError": "Wystąpił błąd. Proszę spróbuj ponownie później."
   }
 }

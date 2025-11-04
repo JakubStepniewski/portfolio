@@ -4,7 +4,35 @@ import React, { useState, FormEvent } from "react";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+  nameRequired?: string;
+  emailRequired?: string;
+  emailInvalid?: string;
+  messageRequired?: string;
+  messageTooShort?: string;
+  yourNamePlaceholder?: string;
+  yourEmailPlaceholder?: string;
+  yourMessagePlaceholder?: string;
+  sendMessageButton?: string;
+  statusSending?: string;
+  statusSuccess?: string;
+  statusError?: string;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({
+  nameRequired,
+  emailRequired,
+  emailInvalid,
+  messageRequired,
+  messageTooShort,
+  yourNamePlaceholder,
+  yourEmailPlaceholder,
+  yourMessagePlaceholder,
+  sendMessageButton,
+  statusSending,
+  statusSuccess,
+  statusError,
+}) => {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [formValues, setFormValues] = useState({
@@ -16,16 +44,17 @@ const ContactForm: React.FC = () => {
   // Walidacja pól
   const validate = () => {
     const newErrors: Record<string, string> = {};
-    if (!formValues.name.trim()) newErrors.name = "Name is required.";
+    if (!formValues.name.trim())
+      newErrors.name = nameRequired || "Name is required.";
     if (!formValues.email.trim()) {
-      newErrors.email = "Email is required.";
+      newErrors.email = emailRequired || "Email is required.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email)) {
-      newErrors.email = "Please enter a valid email address.";
+      newErrors.email = emailInvalid || "Email is invalid.";
     }
     if (!formValues.message.trim()) {
-      newErrors.message = "Message cannot be empty.";
+      newErrors.message = messageRequired || "Message is required.";
     } else if (formValues.message.length < 10) {
-      newErrors.message = "Message must be at least 10 characters long.";
+      newErrors.message = messageTooShort || "Message is too short.";
     }
     return newErrors;
   };
@@ -63,7 +92,7 @@ const ContactForm: React.FC = () => {
     data.append("message", formValues.message);
 
     try {
-      const res = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const res = await fetch("https://formspree.io/f/meopkqaa", {
         method: "POST",
         body: data,
         headers: { Accept: "application/json" },
@@ -91,7 +120,7 @@ const ContactForm: React.FC = () => {
             } focus:outline-none focus:ring-2 focus:ring-blue-500`}
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder={yourNamePlaceholder || "Your Name"}
             value={formValues.name}
             onChange={handleChange}
           />
@@ -108,7 +137,7 @@ const ContactForm: React.FC = () => {
             } focus:outline-none focus:ring-2 focus:ring-blue-500`}
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder={yourEmailPlaceholder || "Your Email"}
             value={formValues.email}
             onChange={handleChange}
           />
@@ -124,7 +153,7 @@ const ContactForm: React.FC = () => {
               errors.message ? "border-red-500" : "border-white"
             } resize-none focus:outline-none focus:ring-2 focus:ring-blue-500`}
             name="message"
-            placeholder="Your Message"
+            placeholder={yourMessagePlaceholder || "Your Message"}
             value={formValues.message}
             onChange={handleChange}
           />
@@ -143,17 +172,17 @@ const ContactForm: React.FC = () => {
               : "bg-blue-600 hover:bg-blue-700"
           }`}
         >
-          {status === "sending" ? "Sending..." : "Send Message"}
+          {status === "sending"
+            ? statusSending || "Sending..."
+            : sendMessageButton || "Send Message"}
         </button>
 
         {/* Status messages */}
         {status === "success" && (
-          <p className="text-green-400 mt-2">✅ Message sent successfully!</p>
+          <p className="text-green-400 mt-2">{statusSuccess}</p>
         )}
         {status === "error" && (
-          <p className="text-red-400 mt-2">
-            ❌ Failed to send message. Please try again later.
-          </p>
+          <p className="text-red-400 mt-2">{statusError}</p>
         )}
       </form>
     </div>

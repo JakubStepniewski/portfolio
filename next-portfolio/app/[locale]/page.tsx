@@ -5,12 +5,21 @@ import SkillBar from "./components/SkillBar";
 import ContactForm from "./components/ContactForm";
 import { useTranslations } from "next-intl";
 import Spacer from "./components/Spacer";
+import AnimatedLink from "./components/AnimatedLink";
+import {
+  Mail as MailIcon,
+  Phone as PhoneIcon,
+  MapPinHouse as MapIcon,
+  Phone,
+} from "lucide-react";
 
 export default function Home() {
   const t = useTranslations("HomePage");
   const e = useTranslations("Education");
   const exp = useTranslations("Experience");
   const l = useTranslations("languageNames");
+  const c = useTranslations("contact");
+  const f = useTranslations("form");
   return (
     <div
       id="top"
@@ -25,13 +34,13 @@ export default function Home() {
           </a>
         </div>
         <div className="flex gap-10 items-center text-sm">
-          <a href="#about">{t("about")}</a>
-          <a href="#skills">{t("skills")}</a>
-          <a href="#education">{t("education")}</a>
-          <a href="#experience">{t("experience")}</a>
-          <a href="#languages">{t("languages")}</a>
-          <a href="#projects">{t("projects")}</a>
-          <a href="#contact">{t("contact")}</a>
+          <AnimatedLink text={t("about")} href="#about" />
+          <AnimatedLink text={t("skills")} href="#skills" />
+          <AnimatedLink text={t("education")} href="#education" />
+          <AnimatedLink text={t("experience")} href="#experience" />
+          <AnimatedLink text={t("languages")} href="#languages" />
+          <AnimatedLink text={t("projects")} href="#projects" />
+          <AnimatedLink text={t("contact")} href="#contact" />
           <LocaleSwitcher />
         </div>
       </div>
@@ -265,50 +274,82 @@ export default function Home() {
         </div>
         <div className="flex flex-row m-10 mt-0 gap-7 mb-20">
           <div className="flex-col w-1/2">
-            <div className="text-2xl">Get In Touch</div>
-            <div className="mt-5">
-              Feel free to reach out if you have any questions or if you'd like
-              to work together on a project. I typically respond within 30
-              hours.
+            <div className="text-2xl">{c("touch")}</div>
+            <div className="mt-5">{c("description")}</div>
+            <div className="flex items-center mt-5">
+              <div className="justify-center items-center flex w-8 h-8 mr-3">
+                <MailIcon className="w-full h-full m-1" />
+              </div>
+              <div className="">kubastp12@gmail.com </div>
             </div>
-            <div className="mt-5">Email: kubastp12@gmail.com </div>
-            <div className="mt-5">Phone: +48 123 456 789</div>
-            <div className="mt-5">Location: Poland Kielce</div>
+
+            <div className="flex items-center mt-5">
+              <div className="justify-center items-center flex w-8 h-8 mr-3">
+                <PhoneIcon className="w-full h-full m-1" />
+              </div>
+              <div className="">+48 781 355 345 </div>
+            </div>
+
+            <div className="flex items-center mt-5">
+              <div className="justify-center items-center flex w-8 h-8 mr-3">
+                <MapIcon className="w-full h-full m-1" />
+              </div>
+              <div className="">
+                {e("locationCity") + ", " + e("locationCountry")}{" "}
+              </div>
+            </div>
+
             <div>
-              <div>Social Media</div>
-              <div className="flex-row flex gap-5 mt-5">
-                <div>
-                  <a href="">
-                    <img
-                      className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
-                      src="/linkedin.png"
-                      alt="LinkedIn"
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="github.com/stepniewski" target="_blank">
-                    <img
-                      className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
-                      src="/github.png"
-                      alt="GitHub"
-                    />
-                  </a>
-                </div>
-                <div>
-                  <a href="twitter.com/stepniewski_" target="_blank">
-                    <img
-                      className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
-                      src="/twitter.png"
-                      alt="Twitter"
-                    />
-                  </a>
-                </div>
+              <div className="flex gap-5 mt-15">
+                <a
+                  href="https://www.linkedin.com/in/jakub-st%C4%99pniewski-3aa043202/"
+                  target="_blank"
+                >
+                  <img
+                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                    src="/linkedin.png"
+                    alt="LinkedIn"
+                  />
+                </a>
+                <a href="github.com/stepniewski" target="_blank">
+                  <img
+                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                    src="/github.png"
+                    alt="GitHub"
+                  />
+                </a>
+                <a href="https://x.com/Stepniewski_J" target="_blank">
+                  <img
+                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                    src="/twitter.png"
+                    alt="Twitter"
+                  />
+                </a>
+                <a href="https://wa.me/48781355345" target="_blank">
+                  <img
+                    className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                    src="/phone.png"
+                    alt="Facebook"
+                  />
+                </a>
               </div>
             </div>
           </div>
           <div className="flex-col w-1/2">
-            <ContactForm />
+            <ContactForm
+              nameRequired={f("nameRequired")}
+              emailRequired={f("emailRequired")}
+              emailInvalid={f("emailInvalid")}
+              messageRequired={f("messageRequired")}
+              messageTooShort={f("messageTooShort")}
+              yourEmailPlaceholder={f("yourEmail")}
+              yourNamePlaceholder={f("yourName")}
+              yourMessagePlaceholder={f("yourMessage")}
+              sendMessageButton={f("send")}
+              statusSending={f("statusSending")}
+              statusSuccess={f("statusSuccess")}
+              statusError={f("statusError")}
+            />
           </div>
         </div>
       </AnimatedSection>
