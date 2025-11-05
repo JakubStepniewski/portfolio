@@ -12,6 +12,7 @@ import {
   MapPinHouse as MapIcon,
   Phone,
 } from "lucide-react";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -23,44 +24,39 @@ export default function Home() {
   return (
     <div
       id="top"
-      className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 2xl:px-100 md:px-40 h-auto"
+      className="bg-[#09090B] min-h-screen bg-[radial-gradient(circle,_#222_1px,_transparent_1px)] [background-size:20px_20px] p-2 h-auto 2xl:px-100 xl:px-40 text-center xl:text-left"
     >
       {/* NAVBAR */}
 
       <div className="mt-4 flex justify-between p-5 text-white bg-zinc-950/30 backdrop-blur-md sticky top-0 z-2 rounded-2xl">
-        <div>
+        <div className="flex justify-center items-center">
           <a href="#top" className="font-bold text-2xl">
             {t("title")}
           </a>
         </div>
-        <div className="flex gap-10 items-center text-sm">
-          <AnimatedLink text={t("about")} href="#about" />
-          <AnimatedLink text={t("skills")} href="#skills" />
-          <AnimatedLink text={t("education")} href="#education" />
-          <AnimatedLink text={t("experience")} href="#experience" />
-          <AnimatedLink text={t("languages")} href="#languages" />
-          <AnimatedLink text={t("projects")} href="#projects" />
-          <AnimatedLink text={t("contact")} href="#contact" />
-          <LocaleSwitcher />
-        </div>
+        <Navbar />
       </div>
 
       {/* PROFILE */}
       <AnimatedSection>
-        <div className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white">
+        <div className=" bg-zinc-zinc-900/30 fade-in mt-30 flex justify-center rounded-2xl p-3 xl:p-10 text-white">
           {/* DESCRIPTION */}
-          <div className="w-150">
+          <div className="w-full">
             <div>
-              <a className="text-5xl font-bold">{t("greeting")}</a>
+              <div className="text-5xl font-bold">
+                {t("greeting")}
+                <br></br>
+                {t("title")}
+              </div>
             </div>
             <div className="mt-5">
-              <a className="text-2xl text-zinc-300">{t("param1")}</a>
+              <div className="text-2xl text-zinc-300 ">{t("param1")}</div>
             </div>
             <div className="mt-5">
-              <a className="text-2xl text-zinc-300">{t("param2")}</a>
+              <span className="text-2xl text-zinc-300">{t("param2")}</span>
             </div>
             {/* SOCIALS */}
-            <div className="flex gap-5 mt-5">
+            <div className="flex gap-5 mt-5 justify-center xl:justify-start">
               <a
                 href="https://www.linkedin.com/in/jakub-st%C4%99pniewski-3aa043202/"
                 target="_blank"
@@ -95,13 +91,12 @@ export default function Home() {
             </div>
           </div>
           {/* PHOTO */}
-          <div className="border-4 border-white rounded-full h-70 w-70 overflow-hidden">
-            <img
-              className=" rounded-full h-70 w-70 object-cover scale-110 hover:scale-100 transition-transform duration-300"
-              src="/profilePhoto.jpg"
-              alt="Profile Picture"
-            />
-          </div>
+
+          <img
+            className="object-cover scale-110 hover:scale-100 transition-transform duration-300 w-1/2 h-100 rounded-full border-4 border-white hidden xl:block"
+            src="/profilePhoto.jpg"
+            alt="Profile Picture"
+          />
         </div>
       </AnimatedSection>
       {/* SPACER */}
@@ -111,7 +106,7 @@ export default function Home() {
       <AnimatedSection>
         <div
           id="about"
-          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-3 xl:p-10 text-white"
         >
           <div className="w-150">
             <div>
@@ -135,11 +130,11 @@ export default function Home() {
       <AnimatedSection>
         <div
           id="skills"
-          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-3 xl:p-10 text-white"
         >
           <div className="text-4xl">{t("skills")}</div>
         </div>
-        <div className="m-10 mt-0 gap-7 grid grid-cols-2 grid-gap-7">
+        <div className="m-5 xl:m-10 mt-0 gap-7 grid grid-cols-2 grid-gap-7">
           <SkillBar label="HTML" value={90} />
           <SkillBar label="CSS" value={70} />
 
@@ -165,7 +160,7 @@ export default function Home() {
       {/* EDUCATION */}
       <AnimatedSection>
         <div id="education" className="scroll-mt-24">
-          <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white">
+          <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-3 xl:p-10 text-white">
             <div className="text-4xl">{t("education")}</div>
             <div className="mt-10 flex flex-col gap-10">
               <ExperienceItem
@@ -204,7 +199,7 @@ export default function Home() {
       {/* EXPERIENCE */}
       <AnimatedSection>
         <div id="experience" className="scroll-mt-24">
-          <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white">
+          <div className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-3 xl:p-10 text-white">
             <div className="text-4xl">{t("experience")}</div>
             <div className="mt-10 flex flex-col gap-10">
               <ExperienceItem
@@ -235,11 +230,11 @@ export default function Home() {
       <AnimatedSection>
         <div
           id="languages"
-          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-3 xl:p-10 text-white"
         >
           <div className="text-4xl">{t("languages")}</div>
         </div>
-        <div className="flex flex-col m-10 mt-0 gap-7">
+        <div className="flex flex-col m-5 xl:m-10 mt-0 gap-7">
           <div className="grid grid-cols-2 gap-7">
             <SkillBar label={l("polish")} value={100} />
             <SkillBar label={l("english")} value={90} />
@@ -253,7 +248,7 @@ export default function Home() {
       <AnimatedSection>
         <div
           id="projects"
-          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+          className="scroll-mt-24 bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-3 xl:p-10 text-white"
         >
           <div className="text-4xl">{t("projects")}</div>
         </div>
@@ -268,12 +263,12 @@ export default function Home() {
       <AnimatedSection>
         <div
           id="contact"
-          className=" bg-zinc-900/0 fade-in mt-30 flex justify-between rounded-2xl p-10 text-white"
+          className=" bg-zinc-900/0 fade-in mt-30 justify-between rounded-2xl p-10 text-white"
         >
           <div className="text-4xl">{t("contact")}</div>
         </div>
-        <div className="flex flex-row m-10 mt-0 gap-7 mb-20">
-          <div className="flex-col w-1/2">
+        <div className="flex xl:flex-row flex-col m-10 mt-0 gap-7 mb-20">
+          <div className="flex-col w-full">
             <div className="text-2xl">{c("touch")}</div>
             <div className="mt-5">{c("description")}</div>
             <div className="flex items-center mt-5">
@@ -299,7 +294,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div className="hidden xl:block">
               <div className="flex gap-5 mt-15">
                 <a
                   href="https://www.linkedin.com/in/jakub-st%C4%99pniewski-3aa043202/"
@@ -335,7 +330,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex-col w-1/2">
+          <div className="flex-col w-full">
             <ContactForm
               nameRequired={f("nameRequired")}
               emailRequired={f("emailRequired")}
@@ -350,6 +345,41 @@ export default function Home() {
               statusSuccess={f("statusSuccess")}
               statusError={f("statusError")}
             />
+          </div>
+          <div className="xl:hidden flex justify-center items xl:justify-start">
+            <div className="flex gap-5 mt-15">
+              <a
+                href="https://www.linkedin.com/in/jakub-st%C4%99pniewski-3aa043202/"
+                target="_blank"
+              >
+                <img
+                  className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                  src="/linkedin.png"
+                  alt="LinkedIn"
+                />
+              </a>
+              <a href="github.com/stepniewski" target="_blank">
+                <img
+                  className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                  src="/github.png"
+                  alt="GitHub"
+                />
+              </a>
+              <a href="https://x.com/Stepniewski_J" target="_blank">
+                <img
+                  className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                  src="/twitter.png"
+                  alt="Twitter"
+                />
+              </a>
+              <a href="https://wa.me/48781355345" target="_blank">
+                <img
+                  className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
+                  src="/phone.png"
+                  alt="Facebook"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </AnimatedSection>

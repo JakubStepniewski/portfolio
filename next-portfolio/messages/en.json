@@ -8,7 +8,7 @@
     "languages": "Languages",
     "projects": "Projects",
     "contact": "Contact",
-    "greeting": "Hi, I'm Jakub Stępniewski",
+    "greeting": "Hi, I'm",
     "param1": "A passionate fullstack developer with a knack for creating stunning and user-friendly web applications.",
     "param2": "With expertise in React, Next.js, and modern web technologies, I bring ideas to life through clean and efficient code.",
     "param3": " I'm a dedicated fullstack developer with a passion for crafting visually appealing and user-friendly web applications. My journey in web development began with a fascination for design and a desire to create seamless digital experiences.",
@@ -50,7 +50,7 @@
     "touch": "Get in Touch",
     "description": "If you have any questions or would like to collaborate, feel free to reach out to me through the form below or directly via my email."
   },
-  "formErrors": {
+  "form": {
     "nameRequired": "Name is required.",
     "emailRequired": "Email is required.",
     "emailInvalid": "Please enter a valid email address.",

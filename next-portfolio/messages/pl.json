@@ -8,7 +8,7 @@
     "languages": "Języki",
     "projects": "Projekty",
     "contact": "Kontakt",
-    "greeting": "Cześć, jestem Jakub Stępniewski",
+    "greeting": "Cześć, jestem",
     "param1": "Pasjonat tworzenia oszałamiających i przyjaznych dla użytkownika aplikacji internetowych jako fullstack developer.",
     "param2": "Dzięki doświadczeniu w React, Next.js i nowoczesnych technologiach webowych, ożywiam pomysły poprzez czysty i wydajny kod.",
     "param3": "Jestem fullstack developerem z pasją do tworzenia wizualnie atrakcyjnych i przyjaznych dla użytkownika aplikacji internetowych. Moja przygoda z tworzeniem stron internetowych zaczęła się od fascynacji designem i chęci tworzenia bezproblemowych doświadczeń cyfrowych.",
@@ -48,7 +48,7 @@
     "successMessage": "Twoja wiadomość została wysłana pomyślnie!",
     "errorMessage": "Wystąpił błąd podczas wysyłania wiadomości. Proszę spróbuj ponownie później.",
     "touch": "Skontaktuj się ze mną",
-    "description": "Jeśli masz jakieś pytania lub chcesz nawiązać współpracę, nie wahaj się ze mną skontaktować poprzez poniższy formularz lub bezpośrednio na mój e-mail."
+    "description": "Jeśli masz jakieś pytania lub chcesz nawiązać współpracę, nie wahaj się ze mną skontaktować poprzez poniższy formularz lub bezpośrednio na mój email."
   },
   "form": {
     "nameRequired": "Nazwa jest wymagana.",
