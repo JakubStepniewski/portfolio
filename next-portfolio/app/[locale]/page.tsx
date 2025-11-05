@@ -93,7 +93,7 @@ export default function Home() {
           {/* PHOTO */}
 
           <img
-            className="object-cover scale-110 hover:scale-100 transition-transform duration-300 w-1/2 h-100 rounded-full border-4 border-white hidden xl:block"
+            className="object-cover scale-100 hover:scale-110 transition-transform duration-300 w-150 h-95 rounded-full border-4 border-white hidden xl:block m-3"
             src="/profilePhoto.jpg"
             alt="Profile Picture"
           />
