@@ -67,7 +67,7 @@ export default function Home() {
                   alt="LinkedIn"
                 />
               </a>
-              <a href="github.com/stepniewski" target="_blank">
+              <a href="https://github.com/JakubStepniewski" target="_blank">
                 <img
                   className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
                   src="/github.png"
@@ -358,7 +358,7 @@ export default function Home() {
                   alt="LinkedIn"
                 />
               </a>
-              <a href="github.com/stepniewski" target="_blank">
+              <a href="https://github.com/JakubStepniewski" target="_blank">
                 <img
                   className="h-10 w-10 hover:scale-110 transition-transform duration-300 rounded-full bg-white border-1 border-white"
                   src="/github.png"
