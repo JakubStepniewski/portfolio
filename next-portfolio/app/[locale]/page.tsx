@@ -17,6 +17,7 @@ export const metadata = {
     "Portfolio of Jakub Stępniewski, a passionate web developer specializing in modern web technologies and creating dynamic, user-friendly websites and applications.",
   keywords: [
     "Jakub Stępniewski",
+    "Jakub Stepniewski",
     "Portfolio",
     "Web Developer",
     "JavaScript",
