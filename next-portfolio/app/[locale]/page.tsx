@@ -1,18 +1,44 @@
 import AnimatedSection from "./components/AnimatedSection";
 import ExperienceItem from "./components/ExperienceItem";
-import LocaleSwitcher from "./components/LocaleSwitcher";
 import SkillBar from "./components/SkillBar";
 import ContactForm from "./components/ContactForm";
 import { useTranslations } from "next-intl";
 import Spacer from "./components/Spacer";
-import AnimatedLink from "./components/AnimatedLink";
 import {
   Mail as MailIcon,
   Phone as PhoneIcon,
   MapPinHouse as MapIcon,
-  Phone,
 } from "lucide-react";
 import Navbar from "./components/Navbar";
+
+export const metadata = {
+  title: "Jakub Stępniewski - Portfolio",
+  description:
+    "Portfolio of Jakub Stępniewski, a passionate web developer specializing in modern web technologies and creating dynamic, user-friendly websites and applications.",
+  keywords: [
+    "Jakub Stępniewski",
+    "Portfolio",
+    "Web Developer",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Tailwind CSS",
+    "MongoDB",
+    "PostgreSQL",
+    "Frontend Developer",
+    "Full-Stack Developer",
+    "Web Applications",
+    "Software Engineer",
+    "Programming",
+    "Coding",
+    "Web Design",
+    "Responsive Design",
+    "UI/UX",
+    "GitHub",
+    "LinkedIn",
+  ],
+};
 
 export default function Home() {
   const t = useTranslations("HomePage");
