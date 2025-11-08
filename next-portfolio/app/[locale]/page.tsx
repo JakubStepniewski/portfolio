@@ -38,6 +38,9 @@ export const metadata = {
     "UI/UX",
     "GitHub",
     "LinkedIn",
+    "Bachelor's Degree in Computer Science",
+    "Technikum nr 4 im. Ryszarda Kaczorowskiego Kielce",
+    "Poland",
   ],
 };
 
