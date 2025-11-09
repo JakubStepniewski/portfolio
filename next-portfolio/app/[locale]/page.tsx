@@ -41,6 +41,7 @@ export const metadata = {
     "Bachelor's Degree in Computer Science",
     "Technikum nr 4 im. Ryszarda Kaczorowskiego Kielce",
     "Poland",
+    "Kielce",
   ],
 };
 
