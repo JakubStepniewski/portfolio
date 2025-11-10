@@ -9,11 +9,41 @@
       "source": "/(pl|en|de|fr)/_next/(.*)",
       "destination": "https://email-form-tau-three.vercel.app/_next/$2"
     },
+    {
+      "source": "/email-form/_next/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/_next/$1"
+    },
+    {
+      "source": "/(pl|en|de|fr)/email-form/_next/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/_next/$2"
+    },
 
     
-    { "source": "/email-form", "destination": "https://email-form-tau-three.vercel.app/" },
-    { "source": "/email-form/(.*)", "destination": "https://email-form-tau-three.vercel.app/$1" },
-    { "source": "/(pl|en|de|fr)/email-form", "destination": "https://email-form-tau-three.vercel.app/" },
-    { "source": "/(pl|en|de|fr)/email-form/(.*)", "destination": "https://email-form-tau-three.vercel.app/$2" }
+    {
+      "source": "/email-form/static/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/static/$1"
+    },
+    {
+      "source": "/(pl|en|de|fr)/email-form/static/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/static/$2"
+    },
+
+    
+    {
+      "source": "/email-form",
+      "destination": "https://email-form-tau-three.vercel.app/"
+    },
+    {
+      "source": "/email-form/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/$1"
+    },
+    {
+      "source": "/(pl|en|de|fr)/email-form",
+      "destination": "https://email-form-tau-three.vercel.app/"
+    },
+    {
+      "source": "/(pl|en|de|fr)/email-form/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/$2"
+    }
   ]
 }
