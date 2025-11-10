@@ -1,7 +1,17 @@
 {
   "rewrites": [
+    {
+      "source": "/email-form/_next/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/_next/$1"
+    },
+    {
+      "source": "/(pl|en|de|fr)/email-form/_next/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/_next/$2"
+    },
+
     { "source": "/email-form", "destination": "https://email-form-tau-three.vercel.app/" },
     { "source": "/email-form/(.*)", "destination": "https://email-form-tau-three.vercel.app/$1" },
+
     { "source": "/(pl|en|de|fr)/email-form", "destination": "https://email-form-tau-three.vercel.app/" },
     { "source": "/(pl|en|de|fr)/email-form/(.*)", "destination": "https://email-form-tau-three.vercel.app/$2" }
   ]
