@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/email-form/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/$1"
+    }
+  ]
+}
