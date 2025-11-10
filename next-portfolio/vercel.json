@@ -3,6 +3,10 @@
     {
       "source": "/email-form/(.*)",
       "destination": "https://email-form-tau-three.vercel.app/$1"
+    },
+    {
+      "source": "/(pl|en|de|fr)/email-form/(.*)",
+      "destination": "https://email-form-tau-three.vercel.app/$2"
     }
   ]
 }
