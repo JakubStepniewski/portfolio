@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between shadow-md">
+    <nav className="flex items-center justify-between">
       {/* PRZYCISK MENU (mobile) */}
       <button
         className="xl:hidden p-2 text-gray-700"
