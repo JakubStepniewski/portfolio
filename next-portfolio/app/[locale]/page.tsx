@@ -10,6 +10,7 @@ import {
   MapPinHouse as MapIcon,
 } from "lucide-react";
 import Navbar from "./components/Navbar";
+import ProjectCard from "./components/ProjectCard";
 
 export const metadata = {
   title: "Jakub Stępniewski - Portfolio",
@@ -245,7 +246,7 @@ export default function Home() {
               <ExperienceItem
                 title={exp("title1")}
                 organization={exp("organization2")}
-                organizationLink="https://www.giaic.ai"
+                organizationLink=""
                 startDate="2023"
                 endDate="2023"
                 location={e("locationCity") + ", " + e("locationCountry")}
@@ -283,8 +284,28 @@ export default function Home() {
         >
           <div className="text-4xl">{t("projects")}</div>
         </div>
-        <div className="flex flex-col m-10 mt-0 gap-7 mb-20">
-          <a className="text-2xl text-white">{t("projectsSection")}</a>
+        <div className="grid md:grid-cols-2 gap-8 p-10">
+          <ProjectCard
+            title="Symulacja Handball Manager 2D"
+            description="Symulacja meczu piłki ręcznej stworzona w Unity z algorytmami AI dla ruchu zawodników."
+            image="/projects/handball.png"
+            tech={["Unity", "C#", "AI", "2D"]}
+            longDescription="Pełna symulacja meczu piłki ręcznej stworzona w Unity.
+        Zawiera logikę ruchu zawodników, taktyki, algorytmy podejmowania decyzji,
+        kolizje, podania, rzuty, statystyki meczu oraz system drużynowy. 
+        Projekt inspirowany Football Managerem."
+          />
+
+          <ProjectCard
+            title="Aplikacja AI do rozpoznawania modeli samochodów"
+            description="GUI w Python + Tkinter do trenowania modeli MobileNetV2, ResNet18 i ResNet101."
+            image="/projects/carDet.png"
+            tech={["Python", "Tkinter", "PyTorch", "AI"]}
+            longDescription="Pełna symulacja meczu piłki ręcznej stworzona w Unity.
+        Zawiera logikę ruchu zawodników, taktyki, algorytmy podejmowania decyzji,
+        kolizje, podania, rzuty, statystyki meczu oraz system drużynowy. 
+        Projekt inspirowany Football Managerem."
+          />
         </div>
       </AnimatedSection>
 

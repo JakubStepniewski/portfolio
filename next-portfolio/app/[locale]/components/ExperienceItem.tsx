@@ -42,9 +42,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 
       <div className=" flex-wrap items-center gap-4 text-zinc-300 text-sm mb-2">
         <span className=" items-center gap-1">
-          <span /> {startDate} – {endDate}
-        </span>
-        <span className=" items-center gap-1">
           <span /> {location}
         </span>
       </div>
