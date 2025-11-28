@@ -6,10 +6,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { X } from "lucide-react";
 import React from "react";
+import { ReactNode } from "react";
 
 interface ProjectModalProps {
   title: string;
-  longDescription: string;
+  description: ReactNode;
   image: string;
   tech: string[];
   onClose: () => void;
@@ -17,7 +18,7 @@ interface ProjectModalProps {
 
 export default function ProjectModal({
   title,
-  longDescription,
+  description,
   image,
   tech,
   onClose,
@@ -40,14 +41,14 @@ export default function ProjectModal({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50 p-4 overflow-auto"
+      className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50 p-4 overflow-auto modal-scroll"
       onClick={onClose}
     >
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.8, opacity: 0 }}
-        className="bg-[#111] text-white p-6 rounded-2xl w-full max-w-3xl max-h-[90vh] shadow-xl relative flex flex-col"
+        className="bg-[#111] text-white p-6 rounded-2xl w-full max-w-3xl max-h-[90vh] shadow-xl relative overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -63,7 +64,7 @@ export default function ProjectModal({
           </div>
 
           <h2 className="text-2xl font-bold">{title}</h2>
-          <p className="text-gray-300 leading-relaxed">{longDescription}</p>
+          <div className="text-gray-300 leading-relaxed">{description}</div>
 
           <h3 className="text-lg font-semibold mt-2">Technologie</h3>
           <div className="flex flex-wrap gap-2">

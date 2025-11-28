@@ -4,13 +4,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ProjectModal from "./ProjectModal";
+import AiCarDet from "./AiCarDet";
+import { ReactNode } from "react";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
   tech: string[];
-  longDescription: string;
+  longDescription: ReactNode;
 }
 
 export default function ProjectCard({
@@ -53,7 +55,7 @@ export default function ProjectCard({
       {open && (
         <ProjectModal
           title={title}
-          longDescription={longDescription}
+          description={longDescription}
           image={image}
           tech={tech}
           onClose={() => setOpen(false)}
