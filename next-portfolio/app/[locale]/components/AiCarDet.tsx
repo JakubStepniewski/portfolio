@@ -14,8 +14,8 @@ export default function AiCarDet() {
           <li>analizę i czyszczenie danych,</li>
           <li>filtrowanie wybranych klas,</li>
           <li>
-            zaawansowaną augmentację (obrót, przesunięcia, skalowanie, szumy,
-            kolory),
+            zaawansowaną augmentację (obrót, przesunięcia, skalowanie, dodanie
+            szumu, kolory),
           </li>
           <li>trenowanie modeli CNN: MobileNetV2, ResNet18, ResNet101,</li>
           <li>wizualizację wyników i predykcji z bounding boxami.</li>
