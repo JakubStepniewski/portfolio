@@ -18,7 +18,7 @@ export default function AiCarDet() {
             szumu, kolory),
           </li>
           <li>trenowanie modeli CNN: MobileNetV2, ResNet18, ResNet101,</li>
-          <li>wizualizację wyników i predykcji z bounding boxami.</li>
+          <li>wizualizacja wyników oraz predykcji z bounding boxami.</li>
         </ul>
       </div>
 
